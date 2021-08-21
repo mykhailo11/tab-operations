@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+body{
+    padding: 20px;
+}
+table{
+    margin-bottom: 10px;
+}
+table, table tr, table td, table th{
+    background-color: transparent;
+    transition: background-color 0.4s, max-height 0.4;
+}
+table{
+    border: 1px solid rgb(41, 139, 179);
+}
+table, table td, table th{
+    border-right: 1px solid rgb(41, 139, 179);
+    border-collapse: collapse;
+}
+table td, table th{
+    padding: 10px;
+}
+table th{
+    background-color: rgb(41, 139, 179);
+    color: white;
+}
+.rowHover{
+    background-color: transparent;
+    transition: background-color 0.4s;
+}
+.button:hover{
+    cursor: pointer;
+}
+.rowHover:hover{
+    background-color: rgb(94, 180, 214);   
+    transition: background-color 0.4s; 
+}
+.button{
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: rgb(28, 132, 163);
+}
+path, polygon{
+    fill: white;
+    stroke: white;
+    stroke-width: 6px;
+}
+polygon{
+    stroke-width: 1px;
+}
+
+.selected{
+    background-color: rgb(14, 73, 121);
+    color: white;
+    transition: background-color 0.4s;
+}
+.disabledButton{
+    opacity: 0.5;
+}
+.active{
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
+.active.removeButton path, .active.removeButton polygon{
+    fill: rgb(165, 26, 26);
+    stroke: rgb(165, 26, 26);
+    transition: fill 0.4s, stroke 0.4s;
+}
+.active.addButton path, .active.addButton polygon{
+    fill: rgb(48, 145, 35);
+    stroke: rgb(48, 145, 35);
+    transition: fill 0.4s, stroke 0.4s;
+}
+#blank *{
+    background-color: rgb(169, 191, 253);
+}
+.active.modifyButton path, .active.modifyButton polygon{
+    fill: rgb(201, 189, 19);
+    stroke: rgb(201, 189, 19);
+    transition: fill 0.4s, stroke 0.4s;
+}
+table td input[type="text"]{
+    border: none;
+    width: 100%;
+    max-width: fit-content;
+}
+table td input[type="text"]:focus-visible{
+    outline: none;
+}

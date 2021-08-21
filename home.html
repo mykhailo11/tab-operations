@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody id="mthrfckrs">
+        <tr>
+            <th>Hello</th>
+            <th>Motherfucker</th>
+        </tr>
+        <tr class="editable selectable rowHover">
+            <td>Misha</td>
+            <td>+</td>
+        </tr>
+        <tr class="editable selectable rowHover">
+            <td>Artem</td>
+            <td>-</td>
+        </tr>
+        <tr class="editable selectable rowHover">
+            <td>Artur</td>
+            <td>+</td>
+        </tr>
+        <tr class="editable selectable rowHover">
+            <td>Kaban</td>
+            <td>null</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="controls">
+    <svg height="32" width="32" class="button removeButton" onclick="startRemoveMode(this)">
+        <path d="M9 9 L23 23 M23 9 L9 23" />
+    </svg>
+    <svg height="32" width="32" class="button addButton" onclick="startAddMode(this)">
+        <path d="M16 7 L16 25 M7 16 L25 16" />
+    </svg>
+    <svg height="32" width="32" class="button modifyButton" onclick="startModifyMode(this)">
+        <path d="M9 9 L18 18" />
+        <polygon points="18.5,21.5 21.5,18.5 23,23" />
+    </svg>
+    </div>
+</body>
+</html>
