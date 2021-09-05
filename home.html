@@ -4,46 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
     <title>Document</title>
+    <script type="module" src="js/init.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <table>
-        <tbody id="mthrfckrs">
-        <tr>
-            <th>Hello</th>
-            <th>Motherfucker</th>
-        </tr>
-        <tr class="editable selectable rowHover">
-            <td>Misha</td>
-            <td>+</td>
-        </tr>
-        <tr class="editable selectable rowHover">
-            <td>Artem</td>
-            <td>-</td>
-        </tr>
-        <tr class="editable selectable rowHover">
-            <td>Artur</td>
-            <td>+</td>
-        </tr>
-        <tr class="editable selectable rowHover">
-            <td>Kaban</td>
-            <td>null</td>
-        </tr>
+<body onload="loadComponents()">
+    <table wrapped="true" id="records">
+        <tbody wrapped="true">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+            </tr>
+            <tr wrapped="true" class="controlable selectable able">
+                <td wrapped="true" class="editable able" name="name">Misha</td>
+                <td wrapped="true" class="editable able" name="name">Tkachuk</td>
+                <td class="option">E</td>
+            </tr>
+            <tr wrapped="true" class="controlable selectable able">
+                <td wrapped="true" class="editable able" name="name">Natasha</td>
+                <td wrapped="true" class="editable able" name="name">Rostova</td>
+                <td class="option">E</td>
+            </tr>
+            <tr wrapped="true" class="controlable selectable able">
+                <td wrapped="true" class="editable able" name="name">Nikolai</td>
+                <td wrapped="true" class="editable able" name="name">Pechkin</td>
+                <td class="option">E</td>
+            </tr>
+            <tr wrapped="true" class="controlable selectable able">
+                <td wrapped="true" class="editable able" name="name">Masha</td>
+                <td wrapped="true" class="editable able" name="name">Litvina</td>
+                <td class="option">E</td>
+            </tr>
+            <tr wrapped="true" class="controlable selectable able">
+                <td wrapped="true" class="editable able" name="name">Pavel</td>
+                <td wrapped="true" class="editable able" name="name">Chehov</td>
+                <td class="option">E</td>
+            </tr>
         </tbody>
     </table>
-    <div class="controls">
-    <svg height="32" width="32" class="button removeButton" onclick="startRemoveMode(this)">
-        <path d="M9 9 L23 23 M23 9 L9 23" />
-    </svg>
-    <svg height="32" width="32" class="button addButton" onclick="startAddMode(this)">
-        <path d="M16 7 L16 25 M7 16 L25 16" />
-    </svg>
-    <svg height="32" width="32" class="button modifyButton" onclick="startModifyMode(this)">
-        <path d="M9 9 L18 18" />
-        <polygon points="18.5,21.5 21.5,18.5 23,23" />
-    </svg>
-    </div>
+    <button id="remove" wrapped="true" class="controlable able">Start select mode</button>
+    <button id="insert" wrapped="true" class="controlable able">Insert record</button>
+    <button id="edit" wrapped="true" class="controlable able">Start edit mode</button>
 </body>
 </html>

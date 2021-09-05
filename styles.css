@@ -8,87 +8,45 @@ body{
     padding: 20px;
 }
 table{
-    margin-bottom: 10px;
-}
-table, table tr, table td, table th{
-    background-color: transparent;
-    transition: background-color 0.4s, max-height 0.4;
-}
-table{
-    border: 1px solid rgb(41, 139, 179);
-}
-table, table td, table th{
-    border-right: 1px solid rgb(41, 139, 179);
+    border-left: 1px solid black;
     border-collapse: collapse;
+    max-width: 800px;
+    width: 30vw;
+    min-width: fit-content;
 }
-table td, table th{
-    padding: 10px;
+tr{
+    width: 100%;
 }
-table th{
-    background-color: rgb(41, 139, 179);
-    color: white;
-}
-.rowHover{
+tr[selected="false"] *:not(.option){
     background-color: transparent;
     transition: background-color 0.4s;
 }
-.button:hover{
-    cursor: pointer;
+tr[selected="true"] *:not(.option){
+    background-color: grey;
+    transition: background-color 0.4s;
 }
-.rowHover:hover{
-    background-color: rgb(94, 180, 214);   
-    transition: background-color 0.4s; 
+td, th{
+    border: 1px solid black;
+    padding: 2vmin;
 }
-.button{
-    margin-right: 10px;
-    border-radius: 10px;
-    background-color: rgb(28, 132, 163);
+th{
+    color: white;
+    background-color: black;
+    font-weight: unset;
 }
-path, polygon{
-    fill: white;
-    stroke: white;
-    stroke-width: 6px;
+.option{
+    border: none;
+    display: none;
 }
-polygon{
-    stroke-width: 1px;
+tr:hover .option{
+    display: block;
 }
 
-.selected{
-    background-color: rgb(14, 73, 121);
+                    button{
+    padding: 20px;
     color: white;
-    transition: background-color 0.4s;
-}
-.disabledButton{
-    opacity: 0.5;
-}
-.active{
-    background-color: white;
-    box-shadow: 0px 0px 5px black;
-    transition: background-color 0.4s, box-shadow 0.4s;
-}
-.active.removeButton path, .active.removeButton polygon{
-    fill: rgb(165, 26, 26);
-    stroke: rgb(165, 26, 26);
-    transition: fill 0.4s, stroke 0.4s;
-}
-.active.addButton path, .active.addButton polygon{
-    fill: rgb(48, 145, 35);
-    stroke: rgb(48, 145, 35);
-    transition: fill 0.4s, stroke 0.4s;
-}
-#blank *{
-    background-color: rgb(169, 191, 253);
-}
-.active.modifyButton path, .active.modifyButton polygon{
-    fill: rgb(201, 189, 19);
-    stroke: rgb(201, 189, 19);
-    transition: fill 0.4s, stroke 0.4s;
-}
-table td input[type="text"]{
-    border: none;
-    width: 100%;
-    max-width: fit-content;
-}
-table td input[type="text"]:focus-visible{
+    background-color: black;
     outline: none;
+    border: none;
+    margin-top: 20px;
 }
